@@ -1,0 +1,57 @@
+/* Header.css */
+
+header {
+  position:sticky;
+  top:0;
+  width: 98%; 
+  background-color: #282c34; 
+  color: white; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Padding for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Stick to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it stays above other content */ 
+}
+
+h1 {
+  font-family: 'Arial', sans-serif; /* Font for the title */
+  font-size: 2.5em; /* Large title */
+  margin: 0; /* Remove default margin */
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+nav a {
+  color: white; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  font-family: 'Arial', sans-serif; /* Font for links */
+  font-size: 1.2em; /* Size of links */
+  position: relative; /* For the pseudo-element */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #61dafb; /* Change color on hover */
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px; /* Height of the underline */
+  background: #61dafb; /* Color of the underline */
+  transition: width 0.3s; /* Smooth width transition */
+  position: relative;
+  top: 5px; /* Position the underline */
+}
+
+nav a:hover::after {
+  width: 100%; /* Full width on hover */
+}
